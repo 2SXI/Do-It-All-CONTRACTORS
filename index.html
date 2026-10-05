@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do It All Contractors — Building &amp; Construction, Illovo Business Park, KZN</title>
+<meta name="description" content="Do It All Contractors: new builds, extensions, renovations, roofing and paving in Lower Illovo, Kingsburgh, KwaZulu-Natal. Call 076 467 0753 for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=1800&q=65">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --concrete:#2E2D2A; --concrete-2:#3C3B37; --site:#17160F;
+    --paper:#F2EFE7; --paper-2:#E7E2D3; --white:#FAF8F2;
+    --ink:#201F1A; --muted:#58544A;
+    --hivis:#E8A520; --hivis-d:#B9820F; --brick:#9C4A2E; --brick-d:#7B3A23;
+    --line:rgba(32,31,26,.14); --line-d:rgba(242,239,231,.16);
+  }
+  *{ box-sizing:border-box; margin:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Inter',system-ui,sans-serif; font-size:16px; line-height:1.65; color:var(--ink); background:var(--paper); -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; letter-spacing:-.015em; line-height:1.07; }
+  a{ color:inherit; } img{ display:block; max-width:100%; height:auto; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+  @media (max-width:640px){ .wrap{ padding:0 20px; } }
+  a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ outline:2px solid var(--hivis); outline-offset:3px; }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; } .rise{ opacity:1 !important; transform:none !important; } }
+
+  .btn{ display:inline-flex; align-items:center; gap:9px; padding:14px 26px; font:600 .93rem 'Inter',sans-serif; text-decoration:none; border-radius:2px; border:1px solid transparent; cursor:pointer; transition:background .18s,border-color .18s,transform .18s; }
+  .btn svg{ width:17px; height:17px; flex:none; }
+  .btn-hivis{ background:var(--hivis); color:#271C02; }
+  .btn-hivis:hover{ background:#FFC04A; transform:translateY(-1px); }
+  .btn-line{ border-color:rgba(242,239,231,.5); color:var(--white); }
+  .btn-line:hover{ border-color:#fff; background:rgba(242,239,231,.08); }
+
+  header{ position:fixed; inset:0 0 auto 0; z-index:50; padding:20px 0; transition:background .25s,padding .25s; }
+  header.solid{ background:rgba(23,22,15,.96); padding:12px 0; box-shadow:0 1px 0 rgba(255,255,255,.06); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .brand{ display:flex; flex-direction:column; text-decoration:none; color:var(--white); line-height:1.1; }
+  .brand b{ font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; letter-spacing:-.01em; }
+  .brand small{ font-size:.6rem; font-weight:600; letter-spacing:.16em; color:var(--hivis); }
+  nav.links{ display:flex; gap:28px; font-size:.9rem; font-weight:500; }
+  nav.links a{ text-decoration:none; color:rgba(242,239,231,.82); border-bottom:1px solid transparent; padding:4px 0; }
+  nav.links a:hover{ color:#fff; border-bottom-color:var(--hivis); }
+  .nav-cta{ display:flex; align-items:center; gap:18px; }
+  .nav-cta .tel{ color:rgba(242,239,231,.88); text-decoration:none; font-size:.9rem; font-weight:500; }
+  .nav-cta .btn{ padding:10px 18px; font-size:.86rem; }
+  @media (max-width:920px){ nav.links{ display:none; } }
+  @media (max-width:560px){ .nav-cta .tel{ display:none; } }
+
+  .hero{ position:relative; min-height:96vh; display:flex; align-items:flex-end; color:var(--white);
+    background:linear-gradient(180deg,rgba(23,22,15,.52) 0%,rgba(23,22,15,.3) 42%,rgba(15,14,9,.95) 100%),
+      linear-gradient(90deg,rgba(15,14,9,.68) 0%,rgba(15,14,9,0) 62%),
+      url('https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=1800&q=65') center/cover no-repeat var(--site); }
+  .hero-in{ padding:140px 0 74px; width:100%; }
+  .badge{ display:inline-block; padding:8px 16px; border:1px solid rgba(255,255,255,.35); color:var(--white); font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; border-radius:2px; margin-bottom:26px; }
+  .hero h1{ font-size:clamp(2.5rem,5.8vw,4.4rem); max-width:15ch; line-height:1.04; }
+  .hero h1 em{ font-style:normal; color:var(--hivis); }
+  .hero p.lead{ margin-top:24px; max-width:48ch; font-size:1.15rem; color:rgba(242,239,231,.9); }
+  .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:34px; }
+  .rise{ opacity:0; transform:translateY(16px); animation:rise .8s ease forwards; }
+  .d1{ animation-delay:.1s } .d2{ animation-delay:.25s } .d3{ animation-delay:.42s } .d4{ animation-delay:.58s }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+
+  section{ padding:100px 0; }
+  .eyebrow{ font-size:.76rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--brick); margin-bottom:16px; }
+  .h2{ font-size:clamp(1.95rem,3.7vw,2.8rem); max-width:17ch; }
+  .lede{ margin-top:18px; color:var(--muted); font-size:1.05rem; max-width:44ch; }
+  .head{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:52px; flex-wrap:wrap; }
+  .head .lede{ margin-top:0; max-width:34ch; }
+
+  /* intro */
+  .intro{ display:grid; grid-template-columns:1.05fr .95fr; gap:76px; align-items:center; }
+  .intro p{ color:#3C382F; font-size:1.05rem; margin-top:20px; max-width:50ch; }
+  .figs{ display:flex; gap:40px; margin-top:36px; padding-top:28px; border-top:1px solid var(--line); flex-wrap:wrap; }
+  .figs b{ display:block; font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color:var(--brick-d); line-height:1.1; }
+  .figs span{ display:block; margin-top:6px; font-size:.85rem; color:var(--muted); max-width:18ch; }
+  .frame{ aspect-ratio:4/5; overflow:hidden; border-radius:2px; background:var(--concrete); }
+  .frame img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:900px){ .intro{ grid-template-columns:1fr; gap:44px; } .frame{ order:-1; aspect-ratio:4/3; } }
+
+  /* services */
+  .services{ background:var(--white); border-top:1px solid var(--line); }
+  .cards{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .card{ position:relative; aspect-ratio:3/4.1; overflow:hidden; border-radius:2px; background:var(--concrete); isolation:isolate; }
+  .card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s cubic-bezier(.2,.7,.2,1); }
+  .card:hover img{ transform:scale(1.06); }
+  .card::before{ content:''; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(23,22,15,.05) 32%,rgba(15,14,9,.94) 100%); }
+  .card .body{ position:absolute; inset:auto 0 0 0; z-index:2; padding:26px 24px; color:var(--white); }
+  .card small{ display:block; font-size:.72rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--hivis); margin-bottom:10px; }
+  .card h3{ font-size:1.4rem; margin-bottom:10px; font-weight:700; }
+  .card p{ font-size:.9rem; color:rgba(242,239,231,.82); line-height:1.55; }
+  @media (max-width:1020px){ .cards{ grid-template-columns:repeat(2,1fr); } .card{ aspect-ratio:4/4.2; } }
+  @media (max-width:560px){ .cards{ grid-template-columns:1fr; } .card{ aspect-ratio:4/3.6; } }
+
+  /* on-site band */
+  .band{ position:relative; color:var(--white); overflow:hidden; background:var(--site); isolation:isolate; }
+  .band > img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
+  .band::before{ content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(110deg,rgba(15,14,9,.94) 22%,rgba(15,14,9,.6) 60%,rgba(15,14,9,.92) 100%); }
+  .band-in{ display:grid; grid-template-columns:1.1fr .9fr; gap:72px; align-items:center; }
+  .band .eyebrow{ color:var(--hivis); }
+  .band h2{ font-size:clamp(2rem,3.8vw,2.9rem); max-width:14ch; color:#fff; }
+  .band p.t{ margin-top:18px; color:rgba(242,239,231,.86); max-width:44ch; font-size:1.05rem; }
+  .list{ list-style:none; padding:0; }
+  .list li{ display:flex; gap:16px; align-items:flex-start; padding:20px 0; border-top:1px solid var(--line-d); color:rgba(242,239,231,.94); }
+  .list li:first-child{ border-top:none; padding-top:0; }
+  .list svg{ width:20px; height:20px; color:var(--hivis); flex:none; margin-top:3px; }
+  @media (max-width:860px){ .band-in{ grid-template-columns:1fr; gap:44px; } }
+
+  /* process */
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:44px; }
+  .step{ border-top:1px solid var(--ink); padding-top:26px; }
+  .step .n{ font-family:'Space Grotesk',sans-serif; font-size:3rem; line-height:1; color:var(--brick-d); font-weight:700; }
+  .step h3{ font-size:1.35rem; margin:16px 0 10px; }
+  .step p{ color:var(--muted); }
+  @media (max-width:820px){ .steps{ grid-template-columns:1fr; gap:34px; } }
+
+  /* notes */
+  .notes{ background:var(--paper-2); }
+  .note-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .note-cell{ background:var(--white); padding:26px 22px; display:flex; flex-direction:column; gap:10px; }
+  .note-cell svg{ width:22px; height:22px; color:var(--brick-d); }
+  .note-cell h4{ font-size:.94rem; font-weight:700; margin:0; }
+  .note-cell p{ margin:0; font-size:.83rem; color:var(--muted); }
+  .fine{ margin-top:24px; font-size:.86rem; color:var(--muted); max-width:70ch; }
+  @media (max-width:820px){ .note-grid{ grid-template-columns:repeat(2,1fr); } }
+
+  /* contact */
+  .contact{ position:relative; color:var(--white); background:var(--concrete); isolation:isolate; overflow:hidden; }
+  .contact > img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; opacity:.28; }
+  .contact::before{ content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(46,45,42,.88),rgba(15,14,9,.96)); }
+  .contact .eyebrow{ color:var(--hivis); } .contact .h2{ color:#fff; } .contact .lede{ color:rgba(242,239,231,.8); }
+  .cgrid{ display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+  .cinfo{ margin-top:38px; }
+  .cl{ display:grid; grid-template-columns:120px 1fr; gap:12px; padding:17px 0; border-top:1px solid var(--line-d); }
+  .cl:last-child{ border-bottom:1px solid var(--line-d); }
+  .cl small{ font-size:.7rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,239,231,.55); padding-top:4px; }
+  .cl a{ text-decoration:none; border-bottom:1px solid rgba(242,239,231,.3); } .cl a:hover{ border-bottom-color:var(--hivis); }
+  .cnote{ margin-top:20px; font-size:.86rem; color:rgba(242,239,231,.62); max-width:46ch; }
+  .form{ background:rgba(15,14,9,.6); border:1px solid var(--line-d); border-radius:2px; padding:36px; }
+  .form h3{ font-size:1.5rem; margin-bottom:8px; color:#fff; } .form .s{ font-size:.9rem; color:rgba(242,239,231,.7); margin-bottom:28px; }
+  .fld{ margin-bottom:18px; }
+  .fld label{ display:block; font-size:.7rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,239,231,.6); margin-bottom:8px; }
+  .fld select,.fld input{ width:100%; background:var(--site); border:1px solid var(--line-d); border-radius:2px; color:#fff; padding:14px 15px; font:400 .97rem 'Inter',sans-serif; appearance:none; -webkit-appearance:none; }
+  .fld select{ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23E8A520' stroke-width='1.6' fill='none'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 15px center; }
+  .fld input::placeholder{ color:rgba(242,239,231,.35); }
+  .form .btn{ width:100%; justify-content:center; margin-top:6px; }
+  @media (max-width:900px){ .cgrid{ grid-template-columns:1fr; gap:48px; } }
+
+  footer{ background:var(--site); color:rgba(242,239,231,.62); padding:34px 0; font-size:.84rem; }
+  .foot{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .foot b{ font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:700; color:#fff; }
+
+  .mbar{ display:none; }
+  @media (max-width:640px){
+    .mbar{ display:flex; position:fixed; inset:auto 0 0 0; z-index:60; background:var(--site); border-top:1px solid var(--line-d); }
+    .mbar a{ flex:1; text-align:center; padding:15px 0; color:#fff; text-decoration:none; font-weight:600; font-size:.9rem; }
+    .mbar a+a{ background:var(--hivis); color:#271C02; }
+    body{ padding-bottom:52px; } section{ padding:74px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><b>Do It All</b><small>CONTRACTORS</small></a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#onsite">On site</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="tel" href="tel:+27764670753">076 467 0753</a>
+      <a class="btn btn-hivis" href="https://wa.me/27764670753?text=Hi%20Do%20It%20All%20Contractors%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding:0">
+    <div class="wrap hero-in">
+      <div class="badge rise d1">Building &amp; construction · Lower Illovo, KZN</div>
+      <h1 class="rise d2">Whatever the job, we <em>do it all.</em></h1>
+      <p class="lead rise d3">Do It All Contractors builds new homes, extensions and renovations, and handles roofing and paving — based at Illovo Business Park, serving Lower Illovo and Kingsburgh.</p>
+      <div class="actions rise d4">
+        <a class="btn btn-hivis" href="https://wa.me/27764670753?text=Hi%20Do%20It%20All%20Contractors%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 003.6 17.1L2 22l5-1.6A11 11 0 1020.5 3.5zm-8.4 17a9 9 0 01-4.6-1.3l-.3-.2-3 1 1-2.9-.2-.3a9 9 0 117.1 3.7zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 01-3.7-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.6a1.1 1.1 0 00-.8.4 3.3 3.3 0 00-1 2.4 5.7 5.7 0 001.2 3 13 13 0 005 4.4c1.8.7 2.5.8 3.4.7.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/></svg>
+          Get a quote
+        </a>
+        <a class="btn btn-line" href="#services">See what we build</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap intro">
+      <div>
+        <p class="eyebrow">About the company</p>
+        <h2 class="h2">A local building contractor that handles the whole job.</h2>
+        <p>Do It All Contractors is a building firm based at Illovo Business Park, working across Lower Illovo and Kingsburgh in KwaZulu-Natal. Public listings place the business around new builds, extensions, renovations, roofing and paving — the kind of general building work most homes and properties need at some point.</p>
+        <p>As a local, locally-based contractor, the team is positioned for site visits and quotes across the area without the delay of working from further afield.</p>
+        <div class="figs">
+          <div><b>4.3/5</b><span>rated on Procompare</span></div>
+          <div><b>Illovo</b><span>Business Park, Lower Illovo</span></div>
+          <div><b>KZN</b><span>serving Kingsburgh &amp; surrounds</span></div>
+        </div>
+      </div>
+      <div class="frame"><img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?auto=format&fit=crop&w=900&q=65" alt="Two construction workers in safety vests on site" width="900" height="1125" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">What we build</p><h2 class="h2">New builds, renovations, roofing &amp; paving</h2></div>
+        <p class="lede">The core of the business, in four parts — ask about anything not listed here.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=800&q=65" alt="Gray concrete building under construction" width="800" height="1090" loading="lazy" decoding="async">
+          <div class="body"><small>01 · Builds</small><h3>New builds</h3><p>Ground-up construction, managed from foundation to finish.</p></div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1672627170267-fca17bb54156?auto=format&fit=crop&w=800&q=65" alt="A house under construction with plywood walls and stacked windows" width="800" height="1090" loading="lazy" decoding="async">
+          <div class="body"><small>02 · Extend</small><h3>Extensions &amp; renovations</h3><p>Additions and remodels that work with your existing home.</p></div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?auto=format&fit=crop&w=800&q=65" alt="Workers installing roof tiles on a new building" width="800" height="1090" loading="lazy" decoding="async">
+          <div class="body"><small>03 · Roofing</small><h3>Roofing</h3><p>Roof work carried out as part of a build, or on its own.</p></div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1629608444154-6d052691632f?auto=format&fit=crop&w=800&q=65" alt="Close-up of building materials" width="800" height="1090" loading="lazy" decoding="async">
+          <div class="body"><small>04 · Paving</small><h3>Paving &amp; general building</h3><p>Paving and general building work to round out a property.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="onsite" class="band">
+    <img src="https://images.unsplash.com/photo-1631458325834-8f678e48912c?auto=format&fit=crop&w=1600&q=60" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+    <div class="wrap band-in">
+      <div>
+        <p class="eyebrow">How the business works</p>
+        <h2>A contractor you can reach directly.</h2>
+        <p class="t">Do It All Contractors operates from a fixed base at Illovo Business Park, with listed hours running until 16:30 on weekdays — worth confirming when you call.</p>
+      </div>
+      <ul class="list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10H3z"/></svg><span>Based at Illovo Business Park, Lower Illovo</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Serving Lower Illovo, Kingsburgh and surrounding areas</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Call to arrange a site visit and quote</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Process</p><h2 class="h2">From enquiry to a finished job</h2></div>
+        <p class="lede">A straightforward way to get building work started.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Call or message</h3><p>Describe the job — a new build, an extension, a roof, or paving — and where the property is.</p></div>
+        <div class="step"><div class="n">2</div><h3>Site visit &amp; quote</h3><p>Do It All Contractors assesses the job on site and puts together a quote.</p></div>
+        <div class="step"><div class="n">3</div><h3>The build</h3><p>Once you're happy to proceed, the team carries out the work to completion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Good to know</p><h2 class="h2">Before you get in touch</h2></div>
+        <p class="lede">A few practical notes worth reading first.</p>
+      </div>
+      <div class="note-grid">
+        <div class="note-cell">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <h4>Confirm the address</h4>
+          <p>Units 2, 3, 4 &amp; 5, Illovo Business Park, Lower Illovo, Kingsburgh, KZN, 4150.</p>
+        </div>
+        <div class="note-cell">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <h4>Hours</h4>
+          <p>Listed as open until 16:30 on weekdays — call ahead to confirm.</p>
+        </div>
+        <div class="note-cell">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16l-5.6 3.1 1.4-6.3L3 9.5l6.4-.6L12 2z"/></svg>
+          <h4>Independently rated</h4>
+          <p>Rated 4.3/5 on Procompare — not a Google review count.</p>
+        </div>
+        <div class="note-cell">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+          <h4>Scope on request</h4>
+          <p>Describe your project when you call — services are confirmed directly, not from a fixed list.</p>
+        </div>
+      </div>
+      <p class="fine">Details above are drawn from public business listings and directories, and haven't all been confirmed directly with Do It All Contractors — worth checking when you call.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?auto=format&fit=crop&w=1600&q=55" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+    <div class="wrap cgrid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 class="h2">Get a quote</h2>
+        <p class="lede">Tell us about the job. We'll arrange a site visit and a quote.</p>
+        <div class="cinfo">
+          <div class="cl"><small>Phone</small><a href="tel:+27764670753">076 467 0753</a></div>
+          <div class="cl"><small>WhatsApp</small><a href="https://wa.me/27764670753" target="_blank" rel="noopener">076 467 0753</a></div>
+          <div class="cl"><small>Based at</small><span>Illovo Business Park, Lower Illovo, KZN</span></div>
+        </div>
+        <p class="cnote">Mention the type of job and the property's location — it helps us quote faster.</p>
+      </div>
+      <div class="form">
+        <h3>Send your details on WhatsApp</h3>
+        <p class="s">This opens WhatsApp with your message ready. Nothing is sent until you press send.</p>
+        <div class="fld"><label for="i1">What do you need?</label>
+          <select id="i1"><option>A new build</option><option>An extension or renovation</option><option>Roofing</option><option>Paving</option><option>General building work</option><option>Not sure yet — need advice</option></select></div>
+        <div class="fld"><label for="i2">Brief description</label><input id="i2" type="text" placeholder="e.g. double garage extension"></div>
+        <div class="fld"><label for="i3">Property location</label><input id="i3" type="text" placeholder="e.g. Kingsburgh, KZN"></div>
+        <a class="btn btn-hivis" id="go" href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot"><span><b>Do It All Contractors</b> &nbsp;·&nbsp; Building &amp; construction</span><span>076 467 0753</span><span>&copy; 2026 · Photography is illustrative</span></div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+27764670753">Call</a>
+  <a href="https://wa.me/27764670753?text=Hi%20Do%20It%20All%20Contractors%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+  var hd=document.getElementById('hd');
+  function s(){ hd.classList.toggle('solid', window.scrollY>40); }
+  s(); window.addEventListener('scroll', s, {passive:true});
+  var go=document.getElementById('go');
+  function u(){
+    var t="Hi Do It All Contractors, I'd like a quote for: "+document.getElementById('i1').value+".";
+    var d=document.getElementById('i2').value.trim(), w=document.getElementById('i3').value.trim();
+    if(d) t+=" Details: "+d+"."; if(w) t+=" Location: "+w+".";
+    go.href="https://wa.me/27764670753?text="+encodeURIComponent(t);
+  }
+  ['i1','i2','i3'].forEach(function(id){ document.getElementById(id).addEventListener('input',u); }); u();
+</script>
+</body>
+</html>
